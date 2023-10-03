@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34031.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACML2023_Form", "ACML2023_Form\ACML2023_Form.csproj", "{BA18E956-721F-4EC4-89C9-CBB340DA660D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA18E956-721F-4EC4-89C9-CBB340DA660D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA18E956-721F-4EC4-89C9-CBB340DA660D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA18E956-721F-4EC4-89C9-CBB340DA660D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA18E956-721F-4EC4-89C9-CBB340DA660D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0942C72-0274-4837-92D0-DBE0C9069235}
+	EndGlobalSection
+EndGlobal
