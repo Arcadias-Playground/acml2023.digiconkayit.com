@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EN.master.cs" Inherits="ACML2023_Form.EN" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title> ACML 2023 - Registration Form </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
