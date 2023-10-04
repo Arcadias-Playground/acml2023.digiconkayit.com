@@ -11,43 +11,43 @@ namespace ACML2023_Form
 {
 
 
-    public partial class EN
+    public partial class PaymentFail
     {
 
         /// <summary>
-        /// head denetimi.
+        /// ImgFail denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Image ImgFail;
 
         /// <summary>
-        /// ImgBanner denetimi.
+        /// lblAdSoyad denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgBanner;
+        protected global::System.Web.UI.WebControls.Label lblAdSoyad;
 
         /// <summary>
-        /// form1 denetimi.
+        /// lblOdemeID denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblOdemeID;
 
         /// <summary>
-        /// ContentPlaceHolder1 denetimi.
+        /// hyplnkReturn denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.HyperLink hyplnkReturn;
     }
 }

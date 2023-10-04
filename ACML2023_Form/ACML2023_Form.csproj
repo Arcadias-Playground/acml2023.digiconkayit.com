@@ -48,12 +48,18 @@
     <Reference Include="MailKit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.4.2.0\lib\net47\MailKit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MimeKit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>..\packages\MimeKit.4.2.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Model.Core">
+      <HintPath>..\..\..\Altay\TemelIslemler\Model.Core\bin\Release\Model.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -110,16 +116,58 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="VeritabaniIslemMerkezi.Core">
+      <HintPath>..\..\..\Altay\TemelIslemler\VeritabaniIslemMerkezi.Core\bin\Release\VeritabaniIslemMerkezi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VeritabaniIslemSaglayici.Core.Access">
+      <HintPath>..\..\..\Altay\TemelIslemler\VeritabaniIslemSaglayici.Core.Access\bin\Release\VeritabaniIslemSaglayici.Core.Access.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ACML2023_Form.mdb" />
+    <Content Include="css\all.min.css" />
+    <Content Include="css\AlseinCSS.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Dosyalar\MailLog\forRelease.txt" />
+    <Content Include="Dosyalar\PaymentLog\Fail\forRelease.txt" />
+    <Content Include="Dosyalar\PaymentLog\OK\forRelease.txt" />
+    <Content Include="Dosyalar\PaymentLog\Prepare\forRelease.txt" />
     <Content Include="Global.asax" />
+    <Content Include="Gorseller\banner.png" />
+    <Content Include="Gorseller\Failed.png" />
+    <Content Include="Gorseller\loadspinner.gif" />
+    <Content Include="Gorseller\tick.png" />
+    <Content Include="js\AlseinJS.js" />
     <Content Include="js\bootstrap.js" />
-    <Content Include="Registration-Form.aspx" />
+    <Content Include="js\jquery-3.7.1.min.js" />
+    <Content Include="js\jquery.inputmask.min.js" />
+    <Content Include="Payment.aspx" />
+    <Content Include="PaymentFail.aspx" />
+    <Content Include="RegistationSuccessful.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Base\KatilimciTablosuIslemlerBase.cs" />
+    <Compile Include="Controllers\Base\KatilimciTipiTablosuIslemlerBase.cs" />
+    <Compile Include="Controllers\Base\OdemeTablosuIslemlerBase.cs" />
+    <Compile Include="Controllers\Base\OdemeTipiTablosuIslemlerBase.cs" />
+    <Compile Include="Controllers\Base\UlkeTablosuIslemlerBase.cs" />
+    <Compile Include="Controllers\ExtendedProcess\MailGonderimIslemler.cs" />
+    <Compile Include="Controllers\KatilimciTablosuIslemler.cs" />
+    <Compile Include="Controllers\KatilimciTipiTablosuIslemler.cs" />
+    <Compile Include="Controllers\OdemeTablosuIslemler.cs" />
+    <Compile Include="Controllers\OdemeTipiTablosuIslemler.cs" />
+    <Compile Include="Controllers\UlkeTablosuIslemler.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EN.Master.cs">
       <DependentUpon>EN.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,17 +178,47 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration-Form.aspx.cs">
-      <DependentUpon>Registration-Form.aspx</DependentUpon>
+    <Compile Include="Models\Base\KatilimciTablosuModelBase.cs" />
+    <Compile Include="Models\Base\KatilimciTipiTablosuModelBase.cs" />
+    <Compile Include="Models\Base\OdemeTablosuModelBase.cs" />
+    <Compile Include="Models\Base\OdemeTipiTablosuModelBase.cs" />
+    <Compile Include="Models\Base\UlkeTablosuModelBase.cs" />
+    <Compile Include="Models\KatilimciTablosuModel.cs" />
+    <Compile Include="Models\KatilimciTipiTablosuModel.cs" />
+    <Compile Include="Models\OdemeTablosuModel.cs" />
+    <Compile Include="Models\OdemeTipiTablosuModel.cs" />
+    <Compile Include="Models\Relation\KatilimciTablosuModelRelation.cs" />
+    <Compile Include="Models\Relation\KatilimciTipiTablosuModelRelation.cs" />
+    <Compile Include="Models\Relation\OdemeTablosuModelRelation.cs" />
+    <Compile Include="Models\Relation\OdemeTipiTablosuModelRelation.cs" />
+    <Compile Include="Models\Relation\UlkeTablosuModelRelation.cs" />
+    <Compile Include="Models\UlkeTablosuModel.cs" />
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registration-Form.aspx.designer.cs">
-      <DependentUpon>Registration-Form.aspx</DependentUpon>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentFail.aspx.cs">
+      <DependentUpon>PaymentFail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentFail.aspx.designer.cs">
+      <DependentUpon>PaymentFail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistationSuccessful.aspx.cs">
+      <DependentUpon>RegistationSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistationSuccessful.aspx.designer.cs">
+      <DependentUpon>RegistationSuccessful.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="EN.Master" />
+    <Content Include="js\jquery-3.7.1.min.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -148,15 +226,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+    <Content Include="webfonts\fa-v4compatibility.ttf" />
+    <Content Include="webfonts\fa-v4compatibility.woff2" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Dosyalar\" />
-    <Folder Include="Files\" />
-    <Folder Include="images\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

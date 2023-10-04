@@ -4,18 +4,51 @@
 
 <html>
 <head runat="server">
-    <title> ACML 2023 - Registration Form </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ACML 2023 - Registration Form </title>
+
+    <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/css/bootstrap.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/css/all.min.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/css/AlseinCSS.css?t=1") %>" />
+
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/js/jquery-3.7.1.min.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/js/bootstrap.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/js/AlseinJS.js") %>"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <asp:Image ID="ImgBanner" runat="server" ImageUrl="~/Gorseller/banner.png" CssClass="w-100" />
+            </div>
+        </div>
+
+    </div>
+    <form id="form1" runat="server" class="container">
+        <div class="row">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
-    <script src="js/bootstrap.js"></script>
+
+
+    <div id="Uyari" class="modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="UyariHead">
+                    <h5 class="modal-title" id="UyariBaslik"></h5>
+                </div>
+                <div class="modal-body" id="UyariIcerik">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="btn_UyariKapat"><i class="fa fa-times"></i>&nbsp;Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -11,43 +11,43 @@ namespace ACML2023_Form
 {
 
 
-    public partial class EN
+    public partial class RegistationSuccessful
     {
 
         /// <summary>
-        /// head denetimi.
+        /// ImgOk denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Image ImgOk;
 
         /// <summary>
-        /// ImgBanner denetimi.
+        /// lblAdSoyad denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgBanner;
+        protected global::System.Web.UI.WebControls.Label lblAdSoyad;
 
         /// <summary>
-        /// form1 denetimi.
+        /// lblOdemeID denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblOdemeID;
 
         /// <summary>
-        /// ContentPlaceHolder1 denetimi.
+        /// PnlBankaHavalesi denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Panel PnlBankaHavalesi;
     }
 }
