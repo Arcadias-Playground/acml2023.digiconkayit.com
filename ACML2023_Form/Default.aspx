@@ -122,7 +122,7 @@
                 </asp:Panel>
                 <p align="center">
                     <asp:LinkButton ID="lnkbtnKayitOl" runat="server" CssClass="btn btn-success" OnClick="lnkbtnKayitOl_Click" OnClientClick="$(this).css('display', 'none'); $('.LoadingIcon').css('display', 'inline-block');">
-                        <i class="fa fa-check"></i>&nbsp;Complete Registratipn
+                        <i class="fa fa-check"></i>&nbsp;Complete Registration
                     </asp:LinkButton>
                     <asp:Image ID="ImgLoding" runat="server" ImageUrl="~/Gorseller/loadspinner.gif" CssClass="LoadingIcon"/>
                 </p>
@@ -131,7 +131,7 @@
     </asp:UpdatePanel>
 
     <asp:SqlDataSource runat="server" ID="OleDbUlke" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [UlkeTablosu] ORDER BY [GrupNo], [Ulke]"></asp:SqlDataSource>
-    <asp:SqlDataSource runat="server" ID="OleDbKatilimciTipiListesi" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT [KatilimciTipiID], [KatilimciTipi] &' - '& IIF(NOW() > #10/13/2023 20:59:59#, [ErkenUcret], [NormalUcret]) & ' €' AS [KatilimciTipiWF] FROM [KatilimciTipiTablosu]"></asp:SqlDataSource>
+    <asp:SqlDataSource runat="server" ID="OleDbKatilimciTipiListesi" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT [KatilimciTipiID], [KatilimciTipi] &' - '& IIF(NOW() < #10/18/2023 20:59:59#, [ErkenUcret], [NormalUcret]) & ' €' AS [KatilimciTipiWF] FROM [KatilimciTipiTablosu]"></asp:SqlDataSource>
     <asp:SqlDataSource runat="server" ID="OleDbOdemeTipiListesi" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT [OdemeTipiID], [OdemeTipi] FROM [OdemeTipiTablosu]"></asp:SqlDataSource>
 
 </asp:Content>

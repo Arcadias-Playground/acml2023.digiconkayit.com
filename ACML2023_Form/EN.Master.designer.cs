@@ -24,15 +24,6 @@ namespace ACML2023_Form
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// ImgBanner denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik olarak oluşturulan alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgBanner;
-
-        /// <summary>
         /// form1 denetimi.
         /// </summary>
         /// <remarks>

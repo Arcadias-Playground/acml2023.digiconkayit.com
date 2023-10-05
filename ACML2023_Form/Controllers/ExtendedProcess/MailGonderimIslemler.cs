@@ -21,6 +21,8 @@ namespace VeritabaniIslemMerkezi
             {
                 mm.From.Add(new MailboxAddress("ACML 2023 Congress", "acml2023@digiconkayit.com"));
                 mm.To.Add(new MailboxAddress($"{OModel.KatilimciBilgisi.Ad} {OModel.KatilimciBilgisi.Soyad}", OModel.KatilimciBilgisi.ePosta));
+                mm.Bcc.Add(new MailboxAddress("Mehmet Gönen", "mehmetgonen@ku.edu.tr"));
+                mm.Bcc.Add(new MailboxAddress("Cihan Çalışkan", "cihan@suerturizm.com"));
 
                 mm.Subject = "ACML 2023 Registation Information";
 

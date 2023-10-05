@@ -48,6 +48,20 @@ namespace ACML2023_Form
         protected void ddlOdemeTipi_SelectedIndexChanged(object sender, EventArgs e)
         {
             PnlBankaHavalesi.Visible = ddlOdemeTipi.SelectedValue.Equals("1");
+
+
+            switch (ddlOdemeTipi.SelectedValue)
+            {
+                default:
+                case "1":
+                    lnkbtnKayitOl.Text = "<i class=\"fa fa-check\"></i>&nbsp;Complete Registration";
+                    break;
+
+                case "2":
+                    lnkbtnKayitOl.Text = "<i class=\"fa fa-check\"></i>&nbsp;Process to Payment Information";
+                    break;
+
+            }
         }
 
         protected void lnkbtnKayitOl_Click(object sender, EventArgs e)
@@ -69,7 +83,7 @@ namespace ACML2023_Form
                 OdemeBilgisi = new OdemeTablosuModel
                 {
                     OdemeID = $"ACML{DateTime.Now:yyyyMMddHHmmss}{new Random().Next(10, 99)}",
-                    OdemeTipiID = Kontrol.TamSayiyaKontrol(ddlKatilimciTipi, "Please select your payment type", "Invalid registration type is selected", ref Uyarilar),
+                    OdemeTipiID = Kontrol.TamSayiyaKontrol(ddlOdemeTipi, "Please select your payment type", "Invalid registration type is selected", ref Uyarilar),
                     KatilimciID = 0,
                     Durum = false,
                     OdemeTarihi = null,
