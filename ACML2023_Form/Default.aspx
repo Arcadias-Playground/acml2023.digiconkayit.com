@@ -99,22 +99,22 @@
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Bank Name</td>
-                                    <td>Yapi Kredi Bank</td>
+                                    <td>QNB Finansbank</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Euro IBAN</td>
-                                    <td>TR81 0006 7010 0000 0085 2760 93</td>
+                                    <td>TR76 0011 1000 0000 0129 5308 06</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Swift Code</td>
-                                    <td>YAPITRIS072</td>
+                                    <td>FNNBTRIS</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Adres</td>
-                                    <td>Fisekhane Cad. Turkcu Sokak Kayali Apt. A-Blok No:6/1 D:7 Bakirkoy | istanbul&nbsp;</td>
+                                    <td>Cevizlik Mahallesi, Fahri Koruturk Caddesi Cemal is Hani, No:26/B, 34142 Bakirkoy/istanbul&nbsp;</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -131,7 +131,7 @@
     </asp:UpdatePanel>
 
     <asp:SqlDataSource runat="server" ID="OleDbUlke" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [UlkeTablosu] ORDER BY [GrupNo], [Ulke]"></asp:SqlDataSource>
-    <asp:SqlDataSource runat="server" ID="OleDbKatilimciTipiListesi" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT [KatilimciTipiID], [KatilimciTipi] &' - '& IIF(NOW() < #10/18/2023 20:59:59#, [ErkenUcret], [NormalUcret]) & ' €' AS [KatilimciTipiWF] FROM [KatilimciTipiTablosu]"></asp:SqlDataSource>
+    <asp:SqlDataSource runat="server" ID="OleDbKatilimciTipiListesi" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT [KatilimciTipiID], [KatilimciTipi] &' - '& IIF(NOW() < #10/19/2023 15:00:00#, [ErkenUcret], [NormalUcret]) & ' €' AS [KatilimciTipiWF] FROM [KatilimciTipiTablosu]"></asp:SqlDataSource>
     <asp:SqlDataSource runat="server" ID="OleDbOdemeTipiListesi" ConnectionString='<%$ ConnectionStrings:OleDbConnectionString %>' ProviderName='<%$ ConnectionStrings:OleDbConnectionString.ProviderName %>' SelectCommand="SELECT [OdemeTipiID], [OdemeTipi] FROM [OdemeTipiTablosu]"></asp:SqlDataSource>
 
 </asp:Content>

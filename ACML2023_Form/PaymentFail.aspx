@@ -7,7 +7,7 @@
     <div class="row">
     <div class="col-md-12">
         <fieldset>
-            <legend>Registration Completed</legend>
+            <legend>Payment Fail</legend>
             <p class="text-center">
                 <asp:Image ID="ImgFail" runat="server" CssClass="InfoLogo" ImageUrl="~/Gorseller/Failed.png" style="max-width:250px;"/>
             </p>

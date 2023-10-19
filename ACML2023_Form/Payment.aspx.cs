@@ -68,23 +68,22 @@ namespace ACML2023_Form
             {
                 List<KeyValuePair<string, string>> postParams = new List<KeyValuePair<string, string>>
                 {
-                    new KeyValuePair<string, string>("MbrId", "5"),
+                     new KeyValuePair<string, string>("MbrId", "5"),
                      new KeyValuePair<string, string>("MerchantID", "088900000015289"),
                      new KeyValuePair<string, string>("UserCode", "suerseyahatapi"),
                      new KeyValuePair<string, string>("UserPass", "VEXA9"),
                      new KeyValuePair<string, string>("SecureType", "3DPay"),
                      new KeyValuePair<string, string>("TxnType", "Auth"),
                      new KeyValuePair<string, string>("InstallmentCount", "0"),
-                     //new KeyValuePair<string, string>("Currency", "978"),
-                     new KeyValuePair<string, string>("Currency", "949"),
-                     new KeyValuePair<string, string>("OkUrl", $"{Request.Url.Scheme}://{Request.Url.Authority}/{Request.ApplicationPath}/RegistationSuccessful/{lblOdemeID.Text}"),
-                     new KeyValuePair<string, string>("FailUrl", $"{Request.Url.Scheme}://{Request.Url.Authority}/{Request.ApplicationPath}/PaymentFail/{lblOdemeID.Text}"),
+                     new KeyValuePair<string, string>("Currency", "978"),
+                     //new KeyValuePair<string, string>("Currency", "949"),
+                     new KeyValuePair<string, string>("OkUrl", $"https://acml2023.digiconkayit.com/RegistationSuccessful/{lblOdemeID.Text}"),
+                     new KeyValuePair<string, string>("FailUrl", $"https://acml2023.digiconkayit.com/PaymentFail/{lblOdemeID.Text}"),
                      new KeyValuePair<string, string>("OrderId", lblOdemeID.Text),
-                     //new KeyValuePair<string, string>("PurchAmount", $"{Convert.ToDecimal(hfKatilimciTipiUcret.Value):0}"),
-                     new KeyValuePair<string, string>("PurchAmount", $"1"),
+                     new KeyValuePair<string, string>("PurchAmount", $"{Convert.ToDecimal(hfKatilimciTipiUcret.Value):0}"),
+                     //new KeyValuePair<string, string>("PurchAmount", $"1"),
                      new KeyValuePair<string, string>("Lang", "EN"),
                      new KeyValuePair<string, string>("Rnd", DateTime.Now.Ticks.ToString()),
-
                      new KeyValuePair<string, string>("Pan", KrediKartNo.Replace(" ", string.Empty)),
                      new KeyValuePair<string, string>("Expiry", $"{Ay}{Yil}"),
                      new KeyValuePair<string, string>("Cvv2", CVV2)
@@ -92,6 +91,18 @@ namespace ACML2023_Form
 
                 using (SHA1 sha = new SHA1CryptoServiceProvider())
                 {
+                    var t = postParams.First(x => x.Key.Equals("MbrId")).Value;
+                    t = postParams.First(x => x.Key.Equals("OrderId")).Value;
+                    t = postParams.First(x => x.Key.Equals("PurchAmount")).Value;
+                    t = postParams.First(x => x.Key.Equals("OkUrl")).Value;
+                    t = postParams.First(x => x.Key.Equals("FailUrl")).Value;
+                    t = postParams.First(x => x.Key.Equals("TxnType")).Value;
+                    t = postParams.First(x => x.Key.Equals("TxnType")).Value;
+                    t = postParams.First(x => x.Key.Equals("InstallmentCount")).Value;
+                    t = postParams.First(x => x.Key.Equals("Rnd")).Value;
+
+
+
                     postParams.Add(new KeyValuePair<string, string>("Hash", Convert.ToBase64String(sha.ComputeHash(Encoding.ASCII.GetBytes(
                         postParams.First(x => x.Key.Equals("MbrId")).Value +
                         postParams.First(x => x.Key.Equals("OrderId")).Value +

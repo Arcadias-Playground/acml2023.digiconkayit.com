@@ -219,6 +219,7 @@
   <ItemGroup>
     <Content Include="EN.Master" />
     <Content Include="js\jquery-3.7.1.min.map" />
+    <Content Include="Dosyalar\DomesticBIN.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

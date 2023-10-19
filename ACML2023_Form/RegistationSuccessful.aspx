@@ -9,7 +9,7 @@
             <fieldset>
                 <legend>Registration Completed</legend>
                 <p class="text-center">
-                    <asp:Image ID="ImgOk" runat="server" CssClass="InfoLogo" ImageUrl="~/Gorseller/tick.png" style="max-width:250px;"/>
+                    <asp:Image ID="ImgOk" runat="server" CssClass="InfoLogo" ImageUrl="~/Gorseller/tick.png" Style="max-width: 250px;" />
                 </p>
                 <div class="text-center">
                     Dear
@@ -19,7 +19,8 @@
                     Your registration is completed.
                 </div>
                 <div class="text-center">
-                    Order No: <b><asp:Label ID="lblOdemeID" runat="server" Text=""></asp:Label></b>
+                    Order No: <b>
+                        <asp:Label ID="lblOdemeID" runat="server" Text=""></asp:Label></b>
                 </div>
                 <asp:Panel ID="PnlBankaHavalesi" runat="server" Visible="false" CssClass="mt-2">
                     <fieldset>
@@ -34,22 +35,22 @@
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Bank Name</td>
-                                    <td>Yapi Kredi Bank</td>
+                                    <td>QNB Finansbank</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Euro IBAN</td>
-                                    <td>TR81 0006 7010 0000 0085 2760 93</td>
+                                    <td>TR76 0011 1000 0000 0129 5308 06</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Swift Code</td>
-                                    <td>YAPITRIS072</td>
+                                    <td>FNNBTRIS</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>Adres</td>
-                                    <td>Fisekhane Cad. Turkcu Sokak Kayali Apt. A-Blok No:6/1 D:7 Bakirkoy | istanbul&nbsp;</td>
+                                    <td>Cevizlik Mahallesi, Fahri Koruturk Caddesi Cemal is Hani, No:26/B, 34142 Bakirkoy/istanbul&nbsp;</td>
                                 </tr>
                             </tbody>
                         </table>

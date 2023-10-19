@@ -24,7 +24,7 @@ namespace VeritabaniIslemMerkezi
                 mm.Bcc.Add(new MailboxAddress("Mehmet Gönen", "mehmetgonen@ku.edu.tr"));
                 mm.Bcc.Add(new MailboxAddress("Cihan Çalışkan", "cihan@suerturizm.com"));
 
-                mm.Subject = "ACML 2023 Registation Information";
+                mm.Subject = "ACML 2023 Registration Confirmation";
 
                 HtmlContent.Append($"<p>Dear {OModel.KatilimciBilgisi.Ad} {OModel.KatilimciBilgisi.Soyad},</p>");
                 HtmlContent.Append($"<p>Your registration informations:</p>");
@@ -44,10 +44,10 @@ namespace VeritabaniIslemMerkezi
                     HtmlContent.Append($"<p>&nbsp;</p><p style='text-align:center'>Bank Information</p>");
                     HtmlContent.Append($"<table style='width:100%;'>");
                     HtmlContent.Append($"<tr><td style='width:250px;'>Account Name</td><td>Suer Seyahat Acentasi Turizm Ltd. Sti.</td></tr>");
-                    HtmlContent.Append($"<tr><td>Bank Name</td><td>Yapi Kredi Bank</td></tr>");
-                    HtmlContent.Append($"<tr><td>Euro IBAN</td><td>TR81 0006 7010 0000 0085 2760 93</td></tr>");
-                    HtmlContent.Append($"<tr><td>Swift Code</td><td>YAPITRIS072</td></tr>");
-                    HtmlContent.Append($"<tr><td>Adres</td><td>Fisekhane Cad. Turkcu Sokak Kayali Apt. A-Blok No:6/1 D:7 Bakirkoy | istanbul&nbsp;</td></tr>");
+                    HtmlContent.Append($"<tr><td>Bank Name</td><td>QNB Finansbank</td></tr>");
+                    HtmlContent.Append($"<tr><td>Euro IBAN</td><td>TR76 0011 1000 0000 0129 5308 06</td></tr>");
+                    HtmlContent.Append($"<tr><td>Swift Code</td><td>FNNBTRIS</td></tr>");
+                    HtmlContent.Append($"<tr><td>Adres</td><td>Cevizlik Mahallesi, Fahri Koruturk Caddesi Cemal is Hani, No:26/B, 34142 Bakirkoy/istanbul&nbsp;</td></tr>");
                     HtmlContent.Append($"</table>");
                 }
 
